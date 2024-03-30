@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 
-const stripe = require('stripe')('sk_test_51NDU6LSD5QYUJLGVtCfK7wDkJsUdPY13MlXMhFFpEpNAEJXH62jchvBi1BnvAbtNAwe5twenOghQl7YaVKFM2e3000WpAZPDGW');
+const stripe = require('stripe')(`${process.env.STRIPE_SECRET_KEY}`);
 const perPage = 8;
 
 exports.getProducts = (req, res, next) => {

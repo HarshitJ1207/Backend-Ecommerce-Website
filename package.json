@@ -1,45 +1,42 @@
 {
-    "name": "nodejs-complete-guide",
-    "version": "1.0.0",
-    "description": "Complete Node.js Guide",
-    "main": "app.js",
-    "engines": {
-        "node": "18.13.0"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "set MONGO_USER=jain1207harshit&&set MONGO_PASSWORD=RkxX2945&&set MONGO_DATABASE=shop&&node app.js",
-        "dev": "nodemon app.js",
-        "start-server": "node app.js"
-    },
-    "author": "Maximilian Schwarzmüller",
-    "license": "ISC",
-    "devDependencies": {
-        "nodemon": "^2.0.22"
-    },
-    "dependencies": {
-        "bcryptjs": "^2.4.3",
-        "body-parser": "^1.20.2",
-        "compression": "^1.7.4",
-        "connect-flash": "^0.1.1", 
-        "connect-mongodb-session": "^3.1.1",
-        "csurf": "^1.11.0",
-        "ejs": "^3.1.9",
-        "express": "^4.18.2",
-        "express-handlebars": "^7.0.7",
-        "express-session": "^1.17.3",
-        "express-validator": "^7.0.1",
-        "helmet": "^7.0.0",
-        "mongodb": "^5.5.0",
-        "mongoose": "^7.2.1",
-        "morgan": "^1.10.0",
-        "multer": "^1.4.5-lts.1",
-        "mysql2": "^1.6.1",
-        "nodemailer": "^6.9.2",
-        "nodemailer-sendgrid-transport": "^0.2.0",
-        "pdfkit": "^0.13.0",
-        "pug": "^3.0.2",
-        "sequelize": "^6.31.1",
-        "stripe": "^12.7.0"
-    }
+	"devDependencies": {
+		"nodemon": "^2.0.22"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.20.2",
+		"connect-flash": "^0.1.1",
+		"connect-mongodb-session": "^3.1.1",
+		"csurf": "^1.11.0",
+		"ejs": "^3.1.9",
+		"express": "^4.18.2",
+		"express-session": "^1.17.3",
+		"express-validator": "^7.0.1",
+		"mongodb": "^5.5.0",
+		"mongoose": "^7.2.1",
+		"multer": "^1.4.5-lts.1",
+		"mysql2": "^1.6.1",
+		"nodemailer": "^6.9.2",
+		"nodemailer-sendgrid-transport": "^0.2.0",
+		"pdfkit": "^0.13.0",
+		"stripe": "^12.7.0"
+	},
+	"name": "backend-ecommerce",
+	"version": "1.0.0",
+	"description": "E commerce Website",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/HarshitJ1207/Backend-Ecommerce-Website.git"
+	},
+	"author": "Harshit Jain",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/HarshitJ1207/Backend-Ecommerce-Website/issues"
+	},
+	"homepage": "https://github.com/HarshitJ1207/Backend-Ecommerce-Website#readme"
 }

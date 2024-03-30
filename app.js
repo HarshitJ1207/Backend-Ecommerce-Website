@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -11,14 +10,11 @@ const multer = require('multer');
 const crypto = require('crypto'); 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
-// const helmet = require('helmet');
-// const compression = require('compression');
-// const morgan = require('morgan');
-// const https = require('https');
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.9ronrfd.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`;
+
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.9ronrfd.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
+
 console.log(MONGODB_URI);
-// const accessLogstream = fs.createWriteStream(path.join(__dirname , 'access.log') , {flags: 'a'});
 
 const app = express();
 const store = new MongoDBStore({
@@ -48,8 +44,6 @@ const fileFilter = (req, file, cb) => {
     }
 };
 
-// const privateKey = fs.readFileSync('server.key');
-// const certificate = fs.readFileSync('server.cert');
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -60,9 +54,6 @@ const authRoutes = require('./routes/auth');
 
 
 
-// app.use(helmet());
-// app.use(compression());
-// app.use(morgan('combined', {stream: accessLogstream}));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
@@ -88,7 +79,6 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
-    // throw new Error('Sync Dummy');
     if (!req.session.user) {
         return next();
     }
@@ -124,10 +114,6 @@ mongoose
     .connect(MONGODB_URI)
     .then(result => {
         console.log('connection sucessfull');
-        // https.createServer({
-        //     key: privateKey,
-        //     cert: certificate
-        // }, app).listen(process.env.PORT || 3000);
         app.listen(process.env.PORT || 3000);
     })
     .catch(err => {

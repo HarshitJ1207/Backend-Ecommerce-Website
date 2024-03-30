@@ -1,7 +1,8 @@
 {
     "env": {
-        "MONGO_USER": "jain1207harshit",
+        "MONGO_USER": "jain1207harshit" ,
         "MONGO_PASSWORD": "RkxX2945",
-        "MONGO_DATABASE": "shop"
+        "MONGO_DB": "shop",
+        "STRIPE_SECRET_KEY": "sk_test_51NDU6LSD5QYUJLGVtCfK7wDkJsUdPY13MlXMhFFpEpNAEJXH62jchvBi1BnvAbtNAwe5twenOghQl7YaVKFM2e3000WpAZPDGW"
     }
 }
